@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import FruitsVotes from "./components/FruitsVotes";
+import ImageGallery from "./components/ImageGallery";
 
 function App() {
+  const urls = ['https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png'];
+  const fruits = [{name: 'banana', votes: 0}, {name: 'apple', votes: 0}];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ImageGallery urls={urls} />
+
+      <FruitsVotes fruits={fruits} />
+    </>
   );
 }
 
