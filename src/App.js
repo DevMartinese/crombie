@@ -8,8 +8,10 @@ function App() {
 
   return (
     <>
+      {/* First Solution */}
       <ImageGallery urls={urls} />
 
+      {/* Second Solution */}
       <FruitsVotes fruits={fruits} />
     </>
   );
