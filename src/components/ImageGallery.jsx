@@ -18,7 +18,7 @@ const ImageGallery = ({urls}) => {
 
     return (
         <div>
-            {images.map((link, index) => (
+            {(images || []).map((link, index) => (
                 <div key={index}>
                     <img src={link} alt='pokemon'/>
                     <button onClick={() => deleteItem(index)}>X</button>
